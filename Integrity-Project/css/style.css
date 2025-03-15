@@ -1,0 +1,57 @@
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+#boss {
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+#boss-name {
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#site-button {
+  background-color: rgb(52, 183, 235);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#site-button:hover {
+  background-color: rgb(72, 155, 189);
+}
+
+.director-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.director-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.director-container img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  padding-bottom: 30px;
+}
+
+.email-container {
+  display: inline-flex;
+  gap: 5px;
+}
