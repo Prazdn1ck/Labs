@@ -1,24 +1,56 @@
+/* Універсальний селектор */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Селектори по тегу */
+h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #333;
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Селектори по класу */
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 0px;
 }
 
-#boss {
+.boss {
   font-size: 18px;
-  padding-bottom: 5px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 }
 
-#boss-name {
+.boss-name {
   font-size: 28px;
   font-weight: bold;
-  padding-top: 0px;
-  margin-top: 0px;
 }
 
-#site-button {
+.site-button {
   background-color: rgb(52, 183, 235);
   color: white;
   padding: 10px 20px;
@@ -26,32 +58,91 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease;
 }
 
-#site-button:hover {
+.site-button:hover {
   background-color: rgb(72, 155, 189);
 }
 
-.director-container {
+/* Селектор по ID */
+#main-title {
+  color: #1a1a1a;
+}
+
+/* Селектор по атрибуту */
+a[href^="mailto"] {
+  color: darkred;
+  text-decoration: none;
+}
+
+img[alt] {
+  border: 2px solid #ccc;
+}
+
+/* Комбінатори */
+/* Кома */
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Нащадок */
+.main-container ul li {
+  color: #222;
+}
+
+/* Дочірній */
+.person-container > img {
+  border-radius: 8px;
+  width: 180px;
+}
+
+/* Сусідній елемент */
+h3 + p {
+  font-style: italic;
+}
+
+/* Всі сусідні елементи */
+h3 ~ ul {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+/* Псевдокласи */
+a:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+/* Псевдоелементи */
+.check::before {
+  content: "✔ ";
+  color: green;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+.site-button::after {
+  content: " →";
+}
+
+/* Додаткові класи */
+.person-container {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
-.director-info {
+.person-info {
   display: flex;
   flex-direction: column;
-}
-
-.director-container img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  padding-bottom: 30px;
-}
-
-.email-container {
-  display: inline-flex;
-  gap: 5px;
 }
